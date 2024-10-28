@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打磚塊遊戲</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* 可選的背景顏色 */
+        }
+        canvas {
+            border: 1px solid #0095DD;
+            display: block; /* 確保 canvas 以區塊顯示 */
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>打磚塊遊戲</h1>
+        <canvas id="gameCanvas" width="480" height="320"></canvas>
+        <div id="score" class="mt-3">Score: 0</div>
+        <div id="lives" class="mt-3">Lives: 3</div> <!-- 新增生命顯示 -->
+        <button id="start-btn" class="btn btn-primary mt-3">開始遊戲</button>
+        <button id="restart-btn" class="btn btn-secondary mt-3" style="display: none;">重新開始</button>
+        <label for="difficulty" class="mt-3">選擇難度:</label>
+        <select id="difficulty" class="form-select mt-2">
+            <option value="easy">簡單</option>
+            <option value="medium">中等</option>
+            <option value="hard">困難</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
